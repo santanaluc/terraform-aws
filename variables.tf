@@ -12,3 +12,13 @@ variable "capacity_type" {
   type        = string
   description = "SPOT or ON DEMAND"
 }
+
+variable "region" {
+  type = string
+  description = "AWS region to create the resource"
+}
+
+variable "tags" {
+  type = string
+  description = "A map of tags to add to all AWS Resources"
+}
