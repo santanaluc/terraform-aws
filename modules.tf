@@ -26,6 +26,7 @@ module "eks_cluster" {
 module "alb-controller" {
   source       = "./modules/alb-controller"
   project_name = var.project_name
+  cluster_name = module.eks_cluster.cluster_name
   oidc_cluster = module.eks_cluster.oidc_cluster
   tags         = local.tags
 }
