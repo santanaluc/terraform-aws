@@ -22,3 +22,8 @@ variable "subnet_private_1b" {
   type        = string
   description = "Subnet ID from AZ 1a"
 }
+
+variable "capacity_type" {
+  type = string
+  description = "SPOT or ON DEMAND"
+}

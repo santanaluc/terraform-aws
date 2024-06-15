@@ -6,7 +6,7 @@ resource "aws_eks_node_group" "eks_mng" {
     var.subnet_private_1a,
     var.subnet_private_1b
   ]
-  capacity_type = "SPOT"
+  capacity_type = var.capacity_type
 
   scaling_config {
     desired_size = 1
