@@ -1,7 +1,7 @@
-output "eks_vpc_config" {
-  value = module.eks_cluster.eks_vpc_config
+output "ca" {
+  value = module.eks_cluster.certificate_authority
 }
 
-output "oidc" {
-  value = module.eks_cluster.oidc
+output "endpoint" {
+  value = module.eks_cluster.endpoint
 }
