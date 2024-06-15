@@ -19,6 +19,6 @@ variable "region" {
 }
 
 variable "tags" {
-  type = string
+  type = map
   description = "A map of tags to add to all AWS Resources"
 }
