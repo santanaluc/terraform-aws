@@ -14,11 +14,11 @@ variable "capacity_type" {
 }
 
 variable "region" {
-  type = string
+  type        = string
   description = "AWS region to create the resource"
 }
 
 variable "tags" {
-  type = map
+  type        = map(any)
   description = "A map of tags to add to all AWS Resources"
 }
