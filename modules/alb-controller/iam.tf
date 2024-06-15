@@ -6,5 +6,10 @@ resource "aws_iam_policy" "eks_controller_policy" {
   # Terraform expression result to valid JSON syntax.
   policy = file("${path.module}/policy/iam_policy.json")
 
-  tags = var.tags
+  tags = merge(
+    var.tags,
+    {
+      Name = "${var.project_name}-nodegroup"
+    }
+  )
 }
